@@ -1,0 +1,66 @@
+* {
+    font-family: 'Itim', sans-serif;
+}
+
+body {
+    // background-color: rgb(102, 79, 165);
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    background: linear-gradient(45deg, rgb(45, 28, 92), rgb(25, 28, 80));
+    overflow: hidden;
+}
+
+.form-holder { 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 0px; 
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.input-holder { 
+    position:relative;
+    
+}
+
+.form-holder input[type=search] {
+    padding: 5px;
+    font-size: 25px;
+}
+
+ul#search-results {
+    position: absolute;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    li {
+        transform-style: preserve-3d;
+        perspective: 115px;
+        display: block;
+        margin-top:-3px;
+        span {
+            height: 105%;
+            display: block;
+            padding: 15px;
+            transform: rotateX(15deg);
+            text-align: center;
+            background-color: #fff;
+        }
+        &:nth-child(2n) {
+            margin-top:0px;
+            
+            span {
+                transform: rotateX(-15deg);
+                background-color: #eee;
+                margin-bottom: -4px;
+            }
+        }
+    }
+}

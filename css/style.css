@@ -1,0 +1,66 @@
+* {
+  font-family: 'Itim', sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background: linear-gradient(45deg, #2d1c5c, #191c50);
+  overflow: hidden;
+}
+
+.form-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.input-holder {
+  position: relative;
+}
+
+.form-holder input[type=search] {
+  padding: 5px;
+  font-size: 25px;
+}
+
+ul#search-results {
+  position: absolute;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+}
+
+ul#search-results li {
+  transform-style: preserve-3d;
+  perspective: 115px;
+  display: block;
+  margin-top: -3px;
+}
+
+ul#search-results li span {
+  height: 105%;
+  display: block;
+  padding: 15px;
+  transform: rotateX(15deg);
+  text-align: center;
+  background-color: #fff;
+}
+
+ul#search-results li:nth-child(2n) {
+  margin-top: 0px;
+}
+
+ul#search-results li:nth-child(2n) span {
+  transform: rotateX(-15deg);
+  background-color: #eee;
+  margin-bottom: -4px;
+}
