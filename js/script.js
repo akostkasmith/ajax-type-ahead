@@ -3,6 +3,8 @@ const url = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/ra
 const data = fetch(url);
 const cities = [];
 const listEle = document.querySelector('#search-results');
+const searchEle = document.querySelector('#search-box');
+
 
 data.then((blob) => blob.json())
     .then((json) => cities.push(...json))
@@ -19,14 +21,23 @@ function findMatches(keyMatch, cities) {
     });
 }
 
-document.querySelector('#search-box').addEventListener('keyup', function(e) {
-    if (e.target.value.length == 0) { 
+searchEle.addEventListener('keyup', displayMatches); 
+
+function displayMatches() {
+    const searchVal = this.value;
+    if (searchVal.length == 0) { 
         listEle.innerHTML = '';
         return false;
     };
     
-    const citiesArray = findMatches(e.target.value,cities);
-    listEle.innerHTML = citiesArray.map(ele => `<li><span>${ele.city}</span></li>`).join('');
+    const citiesArray = findMatches(searchVal,cities);
+    citiesArray.sort((a,b) => a.city > b.city);
+    listEle.innerHTML = citiesArray.map(ele => {
+        const re = new RegExp(searchVal, 'gi');
+        const city = ele.city.replace(re, `<strong>${searchVal}</strong>`);
+        const state = ele.state.replace(re, `<strong>${searchVal}</strong>`);
+        return `<li><span>${city}, ${state}</span></li>`;
+        
+    }).join('');
 
-
-})
+}

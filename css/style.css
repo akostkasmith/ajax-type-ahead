@@ -27,10 +27,10 @@ body {
 .form-holder input[type=search] {
   padding: 5px;
   font-size: 25px;
+  text-align: center;
 }
 
 ul#search-results {
-  position: absolute;
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -43,7 +43,7 @@ ul#search-results li {
   transform-style: preserve-3d;
   perspective: 115px;
   display: block;
-  margin-top: -3px;
+  margin-top: -2px;
 }
 
 ul#search-results li span {
@@ -53,6 +53,8 @@ ul#search-results li span {
   transform: rotateX(15deg);
   text-align: center;
   background-color: #fff;
+  background: linear-gradient(0deg, #ddd, #fff);
+  box-shadow: 3 3px 0px rgba(0, 0, 0, 0.5);
 }
 
 ul#search-results li:nth-child(2n) {
@@ -62,5 +64,5 @@ ul#search-results li:nth-child(2n) {
 ul#search-results li:nth-child(2n) span {
   transform: rotateX(-15deg);
   background-color: #eee;
-  margin-bottom: -4px;
+  margin-bottom: -3px;
 }

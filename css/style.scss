@@ -30,10 +30,11 @@ body {
 .form-holder input[type=search] {
     padding: 5px;
     font-size: 25px;
+    text-align: center;
 }
 
 ul#search-results {
-    position: absolute;
+    // position: absolute;
     list-style: none;
     padding: 0px;
     margin: 0px;
@@ -44,7 +45,7 @@ ul#search-results {
         transform-style: preserve-3d;
         perspective: 115px;
         display: block;
-        margin-top:-3px;
+        margin-top:-2px;
         span {
             height: 105%;
             display: block;
@@ -52,6 +53,8 @@ ul#search-results {
             transform: rotateX(15deg);
             text-align: center;
             background-color: #fff;
+            background: linear-gradient(0deg, #ddd, #fff);
+            box-shadow: 3 3px 0px rgba(0,0,0,0.5);
         }
         &:nth-child(2n) {
             margin-top:0px;
@@ -59,7 +62,8 @@ ul#search-results {
             span {
                 transform: rotateX(-15deg);
                 background-color: #eee;
-                margin-bottom: -4px;
+                margin-bottom: -3px;
+                // background: linear-gradient(180deg, #ddd, #fff);
             }
         }
     }
