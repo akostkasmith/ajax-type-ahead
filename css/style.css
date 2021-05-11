@@ -7,17 +7,14 @@ body {
   background-size: 100%;
   background: linear-gradient(45deg, #2d1c5c, #191c50);
   overflow: hidden;
+  height: 100vh;
 }
 
 .form-holder {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
+  padding-top: 200px;
 }
 
 .input-holder {

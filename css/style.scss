@@ -8,6 +8,7 @@ body {
     background-size: 100%;
     background: linear-gradient(45deg, rgb(45, 28, 92), rgb(25, 28, 80));
     overflow: hidden;
+    height: 100vh;
 }
 
 .form-holder { 
@@ -15,11 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; 
-    top: 0px; 
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
+    padding-top: 200px; 
 }
 
 .input-holder { 
@@ -34,7 +31,7 @@ body {
 }
 
 ul#search-results {
-    // position: absolute;
+    
     list-style: none;
     padding: 0px;
     margin: 0px;

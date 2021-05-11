@@ -34,8 +34,8 @@ function displayMatches() {
     citiesArray.sort((a,b) => a.city > b.city);
     listEle.innerHTML = citiesArray.map(ele => {
         const re = new RegExp(searchVal, 'gi');
-        const city = ele.city.replace(re, `<strong>${searchVal}</strong>`);
-        const state = ele.state.replace(re, `<strong>${searchVal}</strong>`);
+        const city = ele.city.replace(re, match => `<strong>${match}</strong>`);
+        const state = ele.state.replace(re, match => `<strong>${match}</strong>`);
         return `<li><span>${city}, ${state}</span></li>`;
         
     }).join('');
