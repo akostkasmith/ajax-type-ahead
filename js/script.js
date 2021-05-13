@@ -12,8 +12,6 @@ data.then((blob) => blob.json())
     ); 
 
 
-
-
 function findMatches(keyMatch, cities) {
     return cities.filter((place) => {
         const regex = new RegExp(keyMatch, 'gi');
@@ -21,7 +19,6 @@ function findMatches(keyMatch, cities) {
     });
 }
 
-searchEle.addEventListener('keyup', displayMatches); 
 
 function displayMatches() {
     const searchVal = this.value;
@@ -41,3 +38,19 @@ function displayMatches() {
     }).join('');
 
 }
+
+function selectCity(e) {
+    const selectedEle = e.target.matches('span') ? e.target : e.target.firstChild;
+    searchEle.value = selectedEle.innerText;
+    const event = new Event('change');
+    searchEle.dispatchEvent(event);
+    
+}
+
+/** Event Listeners */
+
+listEle.addEventListener('click', selectCity);
+
+searchEle.addEventListener('keyup', displayMatches); 
+searchEle.addEventListener('change', displayMatches); 
+
