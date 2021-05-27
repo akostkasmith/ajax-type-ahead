@@ -52,6 +52,8 @@ ul#search-results li span {
   background-color: #fff;
   background: linear-gradient(0deg, #ddd, #fff);
   box-shadow: 3 3px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: color 250ms ease;
 }
 
 ul#search-results li:nth-child(2n) {
@@ -62,4 +64,8 @@ ul#search-results li:nth-child(2n) span {
   transform: rotateX(-15deg);
   background-color: #eee;
   margin-bottom: -3px;
+}
+
+ul#search-results li:hover span {
+  color: #f00;
 }

@@ -52,6 +52,8 @@ ul#search-results {
             background-color: #fff;
             background: linear-gradient(0deg, #ddd, #fff);
             box-shadow: 3 3px 0px rgba(0,0,0,0.5);
+            cursor: pointer; 
+            transition: color 250ms ease;
         }
         &:nth-child(2n) {
             margin-top:0px;
@@ -62,6 +64,9 @@ ul#search-results {
                 margin-bottom: -3px;
                 // background: linear-gradient(180deg, #ddd, #fff);
             }
+        }
+        &:hover span {
+            color: #f00;
         }
     }
 }
